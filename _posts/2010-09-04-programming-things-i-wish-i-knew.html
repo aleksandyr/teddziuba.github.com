@@ -2,7 +2,7 @@
 layout: post
 title: Programming Things I Wish I Knew Earlier
 ---
-<img src="/images/racial-slurs-make-for-a-pretty-awesome-server-naming-convention.jpg" class="post-lead-image">
+<img src="/teddziuba.github.com/images/racial-slurs-make-for-a-pretty-awesome-server-naming-convention.jpg" class="post-lead-image">
 <p>Programming in a startup is much different than programming at a big company. At a startup, not only are you the developer, but you are also the systems administrator for the most part.  I've been startupping for three years now, and have had my ass kicked enough times to step back and think that maybe I should learn how to do things the right way rather than try to bludgeon my way through with raw intellect.</p>
 
 <p>These are the things I wish I had known in the beginning, or at least I wish I hadn't been too subborn to learn.</p>
@@ -40,7 +40,7 @@ exec python /path/to/my/program.py
 
 
 <h3>NoSQL is NotWorthIt</h3>
-<p>I've <a href="/2010/03/i-cant-wait-for-nosql-to-die.html">talked a lot of shit on NoSQL</a> in the past, but I recently decided to see if I had been living a lie. I tried to use Redis for some not-as-mission-critical systems at Milo - applications where data loss is not that big of a deal. Redis, even though it's an in-memory database, has a virtual memory feature, where you can cap the amount of RAM it uses and have it spill the data over to disk. So, I threw 75GB of data at it, giving it a healthy amount of physical memory to keep hot keys in.</p>
+<p>I've <a href="/teddziuba.github.com/2010/03/i-cant-wait-for-nosql-to-die.html">talked a lot of shit on NoSQL</a> in the past, but I recently decided to see if I had been living a lie. I tried to use Redis for some not-as-mission-critical systems at Milo - applications where data loss is not that big of a deal. Redis, even though it's an in-memory database, has a virtual memory feature, where you can cap the amount of RAM it uses and have it spill the data over to disk. So, I threw 75GB of data at it, giving it a healthy amount of physical memory to keep hot keys in.</p>
 
 <p>For the most part things went smoothly, until it hit the wall. The Redis server would hang, accepting new sockets, but not servicing any requests. Replication stopped working.  When re-starting the server, it would take forty-five minutes (!) from invocation time before it was ready to serve requests.</p>
 

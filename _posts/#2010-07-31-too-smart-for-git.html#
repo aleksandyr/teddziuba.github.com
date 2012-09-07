@@ -3,7 +3,7 @@ title: Too Smart for Git
 layout: post
 ---
 
-<img class="post-lead-image" src="/images/the-fundamental-thought-that-drives-a-womans-every-action-is-that-somewhere-a-man-is-relaxing.jpg">
+<img class="post-lead-image" src="/teddziuba.github.com/images/the-fundamental-thought-that-drives-a-womans-every-action-is-that-somewhere-a-man-is-relaxing.jpg">
 
 <p>The worst part about Git is "Git-SVN Crash Course" tutorial, because it will convince a newcomer that their understanding of how source control works transfers smoothly to Git.  If you combine that with the fact that most smart people simply refuse to read documentation and will just mash on the keyboard until it <em>appears</em> to work, it means that teams who are starting out using Git are on the yellow brick road to a world of hurt.</p>
 
@@ -11,7 +11,7 @@ layout: post
 
 <p>Milo has been using Git from the get-go, and the git pull/git push with a central repository works well enough when you only have a handful of developers.</p>
 
-<img class="mt-image-center" src="/images/good-luck-untangling-that-commit-history.png">
+<img class="mt-image-center" src="/teddziuba.github.com/images/good-luck-untangling-that-commit-history.png">
 
 <p>This fits with the Subversion worldview that a benevolent central server will never lead you astray.  The first time you get some error about not being able to push non-fast-forward commits to origin, you kind of gloss over it, and a <code>git pull</code> fixes you right up. If you understand Git as you understand SVN, you can easily mistake this error for something like "oh, I just have to do a merge because someone else's commits beat me to it". Well, technically that's right, but for the wrong reasons.  Using this model, if you think of the developers as different threads sharing the origin repository resource, Git is putting lock on the <em>whole repository</em>, as opposed to individual files. With a lot of threads sharing a coarsely-locked resource, there's always going to be contention. However, in a small enough team, it's workable to think of it this way.</p>
 
@@ -19,7 +19,7 @@ layout: post
 
 <p>In the last couple of weeks, we started using Gerrit for code reviews, and anyone who was using Git like a translation table for SVN commands just heard the bell ring at the School of Hard Knocks.</p>
 
-<img class="mt-image-center" src="/images/rebase-ooh-that-sounds-fun.png">
+<img class="mt-image-center" src="/teddziuba.github.com/images/rebase-ooh-that-sounds-fun.png">
 
 <p>Gerrit acts as an intermediary between developers and the origin repository. You send commits to Gerrit and it holds them in purgatory until they are signed off on by another developer. Then, if the commit merges cleanly into the branch, Gerrit makes the merge. Otherwise, it asks you to upload a merge commit, which is where the fun <em>really</em> starts.</p>
 
