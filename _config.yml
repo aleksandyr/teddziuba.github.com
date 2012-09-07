@@ -1,2 +1,2 @@
-permalink: /teddziuba.github.com/:year/:month/:title.html
+permalink: /:year/:month/:title.html
 pygments: true
